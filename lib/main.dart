@@ -1,5 +1,6 @@
 import 'package:been_memory_love/pages/home_page.dart';
 import 'package:been_memory_love/pages/lading_page.dart';
+import 'package:been_memory_love/pages/ManagerFile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/loading_page': (context) => const LadingPage(),
         '/home_page': (context) => const HomePage(),
+        '/manager_file': (context) => const AppFile(),
       },
       theme: ThemeData(
           colorScheme: ColorScheme.fromSwatch().copyWith(
