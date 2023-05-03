@@ -32,6 +32,8 @@ dependencies:
     sdk: flutter
   cupertino_icons: ^1.0.2
   shimmer: ^2.0.0
+  path_provider: ^2.0.11
+  image_picker: ^0.8.7+4
 flutter_launcher_name:
   name: "BhInLovePh"
 dev_dependencies:
