@@ -172,6 +172,12 @@ class _HomePageState extends State<ViewFiles> {
     );
   }
 
+  List<FileSystemEntity> _filterFolders(String query) {
+    return _folders.where((folder) {
+      return folder.path.toLowerCase().contains(query.toLowerCase());
+    }).toList();
+  }
+
   @override
   void initState() {
     _folders = [];
@@ -183,15 +189,14 @@ class _HomePageState extends State<ViewFiles> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Quản lý hình ảnh"),
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pushReplacementNamed(context, '/home_page');
-          },
-          icon: const Icon(Icons.arrow_back_ios),
-          //replace with our own icon data.
-        ),
-      ),
+          title: const Text("Quản lý hình ảnh"),
+          leading: IconButton(
+            onPressed: () {
+              Navigator.pushReplacementNamed(context, '/home_page');
+            },
+            icon: const Icon(Icons.arrow_back_ios),
+            //replace with our own icon data.
+          )),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           _showMyDialog();

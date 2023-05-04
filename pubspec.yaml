@@ -34,6 +34,7 @@ dependencies:
   shimmer: ^2.0.0
   path_provider: ^2.0.11
   image_picker: ^0.8.7+4
+  http: ^0.13.6
 flutter_launcher_name:
   name: "BhInLovePh"
 dev_dependencies:

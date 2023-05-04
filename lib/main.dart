@@ -1,10 +1,23 @@
+import 'dart:io';
+
 import 'package:been_memory_love/pages/home_page.dart';
 import 'package:been_memory_love/pages/lading_page.dart';
 import 'package:been_memory_love/pages/ManagerFile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
+class MyHttpOverrides extends HttpOverrides {
+  @override
+  HttpClient createHttpClient(SecurityContext? context) {
+    HttpClient client = super.createHttpClient(context);
+    client.badCertificateCallback =
+        (X509Certificate cert, String host, int port) => true;
+    return client;
+  }
+}
+
 void main() {
+  HttpOverrides.global = MyHttpOverrides();
   runApp(const MyApp());
 }
 
